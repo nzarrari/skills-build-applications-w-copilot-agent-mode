@@ -1,0 +1,20 @@
+{
+    // Use the Python interpreter from the venv
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Django Server",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/manage.py",
+            "args": [
+                "runserver", "0.0.0.0:8000"
+            ],
+            "django": true,
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "octofit_tracker.settings"
+            },
+            "justMyCode": true
+        }
+    ]
+}

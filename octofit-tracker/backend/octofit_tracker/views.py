@@ -9,7 +9,9 @@ def api_root(request, format=None):
     if request.method == 'POST':
         return Response({"message": "POST request received"}, status=status.HTTP_201_CREATED)
 
-    base_url = 'http://localhost:8000/'
+    # Use Codespace URL if available, else fallback to localhost
+    codespace_url = 'https://expert-space-zebra-4vgv99jx6gf7wgp-8000.app.github.dev/'
+    base_url = codespace_url if 'expert-space-zebra-4vgv99jx6gf7wgp-8000.app.github.dev' in request.get_host() else 'http://localhost:8000/'
     return Response({
         'users': base_url + 'api/users/?format=api',
         'teams': base_url + 'api/teams/?format=api',
