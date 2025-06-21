@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/workspaces/skills-build-applications-w-copilot-agent-mode/octofit-tracker/backend/manage.py", line 22, in <module>
+    main()
+  File "/workspaces/skills-build-applications-w-copilot-agent-mode/octofit-tracker/backend/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/workspaces/skills-build-applications-w-copilot-agent-mode/octofit-tracker/backend/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "/workspaces/skills-build-applications-w-copilot-agent-mode/octofit-tracker/backend/venv/lib/python3.12/site-packages/django/core/management/__init__.py", line 440, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/workspaces/skills-build-applications-w-copilot-agent-mode/octofit-tracker/backend/venv/lib/python3.12/site-packages/django/core/management/base.py", line 402, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/workspaces/skills-build-applications-w-copilot-agent-mode/octofit-tracker/backend/venv/lib/python3.12/site-packages/django/core/management/base.py", line 448, in execute
+    output = self.handle(*args, **options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/skills-build-applications-w-copilot-agent-mode/octofit-tracker/backend/octofit_tracker/management/commands/populate_db.py", line 13, in handle
+    client = MongoClient(settings.DATABASES['default']['HOST'], settings.DATABASES['default']['PORT'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/skills-build-applications-w-copilot-agent-mode/octofit-tracker/backend/venv/lib/python3.12/site-packages/pymongo/mongo_client.py", line 642, in __init__
+    raise TypeError("port must be an instance of int")
+TypeError: port must be an instance of int
